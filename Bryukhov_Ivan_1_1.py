@@ -1,20 +1,20 @@
-Duration = int(input('Введите число: '))
-if Duration <= 59:
-    print(Duration, 'секунд')
-elif Duration <= 3599:
-    m = Duration // 60;
-    s = Duration % 60;
+duration = int(input('Введите число: '))
+if duration <= 59:
+    print(duration, 'секунд')
+elif duration <= 3599:
+    m = duration // 60
+    s = duration % 60
     print(m, 'минут', s, 'секунд')
-elif Duration <= 86399:
-    h = Duration // 3600;
-    m = (Duration - h * 3600) // 60;
-    s = Duration % 60;
+elif duration <= 86399:
+    h = duration // 3600
+    m = (duration - h * 3600) // 60
+    s = duration % 60
     print(h, 'час', m, 'минут', s, 'секунд')
 else:
-    d = Duration // 86400;
-    h = (Duration - d * 86400) // 3600;
-    m = (Duration - (d * 86400 + h * 3600)) // 60;
-    s = Duration % 60;
+    d = duration // 86400
+    h = (duration - d * 86400) // 3600
+    m = (duration - (d * 86400 + h * 3600)) // 60
+    s = duration % 60
     print(d, 'дней', h, 'час', m, 'минут', s, 'секунд')
 
 
