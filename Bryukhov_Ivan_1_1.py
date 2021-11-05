@@ -1,3 +1,4 @@
+#Содаем функцию для склонения слова 'Секунд'
 def my_time_sek (num):
     string = ''
     if num in range(10, 21):
@@ -9,6 +10,7 @@ def my_time_sek (num):
     else:
         string = 'Секунд'
     return string
+#Содаем функцию для склонения слова 'Минут'
 def my_time_min (num):
     string = ''
     if num in range(10, 21):
@@ -20,6 +22,7 @@ def my_time_min (num):
     else:
         string = 'Минут'
     return string
+#Содаем функцию для склонения слова 'Час'
 def my_time_hour (num):
     string = ''
     if num in range(10, 21):
@@ -31,6 +34,7 @@ def my_time_hour (num):
     else:
         string = 'Часов'
     return string
+#Содаем функцию для склонения слова 'День'
 def my_time_day(num):
     string = ''
     if num in range(10, 21):
@@ -42,7 +46,7 @@ def my_time_day(num):
     else:
         string = 'Дней'
     return string
-
+#Создаем алгоритм для реализации вывода информации в висимости от его продолжительности
 duration = int(input('Введите число: '))
 if duration <= 59:
     print(duration, my_time_sek(duration))
