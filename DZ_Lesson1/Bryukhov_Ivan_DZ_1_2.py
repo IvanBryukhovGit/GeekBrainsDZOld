@@ -7,6 +7,7 @@ for oddNumbers in range(1,1001):
         cubeList.append(oddNumbers)
 # Задание 1a: Создаем алгоритм для суммы чисел из списка, состоящего из кубов нечётных чисел от 1 до 1000
 # Сумма цифр которох делится на 7 нацело
+
 for num in cubeList:
     summ = 0
     while num > 0:
