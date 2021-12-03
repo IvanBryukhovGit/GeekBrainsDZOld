@@ -1,0 +1,36 @@
+I0304 13:41:04.619670       8 flags.go:198] Watching for Ingress class: nginx
+W0304 13:41:04.620955       8 flags.go:243] SSL certificate chain completion is disabled (--enable-ssl-chain-completion=false)
+W0304 13:41:04.621071       8 client_config.go:541] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+I0304 13:41:04.621458       8 main.go:182] Creating API client for https://10.3.0.1:443
+I0304 13:41:04.670501       8 main.go:226] Running in Kubernetes cluster version v1.14 (v1.14.10) - git (clean) commit 575467a0eaf3ca1f20eb86215b3bde40a5ae617a - platform linux/amd64
+I0304 13:41:04.699444       8 main.go:90] Validated ovh/ovh-nginx-ingress-default-backend as the default backend.
+I0304 13:41:04.986907       8 main.go:101] SSL fake certificate created /etc/ingress-controller/ssl/default-fake-certificate.pem
+I0304 13:41:05.072758       8 nginx.go:263] Starting NGINX Ingress controller
+I0304 13:41:10.198716       8 event.go:255] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"ovh", Name:"ovh-nginx-ingress-controller", UID:"b75289f2-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"v1", ResourceVersion:"18736142334", FieldPath:""}): type: 'Normal' reason: 'CREATE' ConfigMap ovh/ovh-nginx-ingress-controller
+I0304 13:41:11.283418       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"ovh-grafana", UID:"b81677e1-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284536", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/ovh-grafana
+I0304 13:41:11.284680       8 backend_ssl.go:66] Adding Secret "ovh/tls-crt" to the local store
+I0304 13:41:11.284965       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"redirector", UID:"b81959aa-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284539", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/redirector
+I0304 13:41:11.285823       8 backend_ssl.go:66] Adding Secret "ovh/kubelego-tls-redirector" to the local store
+I0304 13:41:11.286153       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"kube-system", Name:"traefik-web-ui", UID:"2a2b13c5-de7d-11e8-b53a-ca03bccd5c15", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"201390203", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress kube-system/traefik-web-ui
+I0304 13:41:11.286486       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"jupyterhub", UID:"b81370ba-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"18572141393", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/jupyterhub
+I0304 13:41:11.287604       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"kube-lego-nginx", UID:"94c4b969-7c97-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"18668167395", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/kube-lego-nginx
+I0304 13:41:11.287945       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"ovh-mybinder-org", UID:"5eeb264e-87aa-11e9-91cb-8e1e5219e51f", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284538", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/ovh-mybinder-org
+I0304 13:41:11.288698       8 backend_ssl.go:66] Adding Secret "ovh/kubelego-tls-binder-ovh" to the local store
+I0304 13:41:11.288931       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"ovh-prometheus-server", UID:"b81807d3-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284531", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/ovh-prometheus-server
+I0304 13:41:11.289964       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"static", UID:"b81b2505-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284532", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/static
+I0304 13:41:11.290763       8 backend_ssl.go:66] Adding Secret "ovh/kubelego-tls-static" to the local store
+I0304 13:41:11.290959       8 event.go:255] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"ovh", Name:"binderhub", UID:"b8150345-7c9b-11e9-b536-0ef42209b5f2", APIVersion:"networking.k8s.io/v1beta1", ResourceVersion:"15633284528", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress ovh/binderhub
+I0304 13:41:11.373942       8 nginx.go:307] Starting NGINX process
+I0304 13:41:11.374057       8 leaderelection.go:241] attempting to acquire leader lease  ovh/ingress-controller-leader-nginx...
+W0304 13:41:11.375619       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+I0304 13:41:11.376650       8 controller.go:134] Configuration changes detected, backend reload required.
+I0304 13:41:11.386764       8 status.go:86] new leader elected: ovh-nginx-ingress-controller-79cfc875-l572z
+I0304 13:41:11.614580       8 controller.go:150] Backend successfully reloaded.
+I0304 13:41:11.614679       8 controller.go:159] Initial sync, sleeping for 1 second.
+W0304 13:41:14.709142       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:18.042444       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:21.375798       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:24.709212       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:28.042407       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:31.375764       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
+W0304 13:41:34.709199       8 controller.go:811] Error obtaining Endpoints for Service "kube-system/traefik-web-ui": no object matching key "kube-system/traefik-web-ui" in local store
